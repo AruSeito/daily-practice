@@ -1,4 +1,4 @@
-function deepClone(value) {
+function deepClone(value, hashMap = new WeakMap()) {
   if (value == undefined || typeof value !== 'object') {
     return value;
   }
@@ -11,10 +11,16 @@ function deepClone(value) {
     return new RegExp(value);
   }
 
-  const result = new value.constructor();
+  const hashKey = hashMap.get(value);
+  if (hashKey) {
+    return hashKey;
+  }
 
+
+  const result = new value.constructor();
+  hashMap.set(value, result);
   Object.keys(value).forEach((key) => {
-    result[key] = deepClone(value[key]);
+    result[key] = deepClone(value[key], hashMap);
   })
 
   return result;
