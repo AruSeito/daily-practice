@@ -33,7 +33,7 @@ class eventBus {
     if (!cb) {
       this.events[eventName] = null;
     } else {
-      this.events[event] = this.events[event].filter((item) => item !== cb);
+      this.events[eventName] = this.events[eventName].filter((item) => item !== cb);
     }
     return this;
   }
