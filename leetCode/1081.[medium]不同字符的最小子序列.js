@@ -19,9 +19,10 @@ var smallestSubsequence = function (s) {
   for (let i = 0; i < s.length; i++) {
     countChar[s[i]] = countChar[s[i]] + 1 || 1;
   }
-  let hasChar = {}, stack = []
+  let hasChar = {},
+    stack = [];
   for (let i = 0; i < s.length; i++) {
-    countChar[s[i]] = countChar[s[i]] - 1
+    countChar[s[i]] = countChar[s[i]] - 1;
     if (hasChar[s[i]]) continue;
     while (stack.length && s[i] < stack[stack.length - 1]) {
       if (countChar[stack[stack.length - 1]] === 0) break;
@@ -33,4 +34,3 @@ var smallestSubsequence = function (s) {
   return stack.join("");
 };
 // @lc code=end
-
