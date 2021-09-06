@@ -4,6 +4,11 @@
  * [222] 完全二叉树的节点个数
  */
 
+/**
+ * @solution
+ * 计算公式：总结点=1+左节点个数+右节点个数。1是因为根节点也算一个节点
+ */
+
 // @lc code=start
 /**
  * Definition for a binary tree node.
