@@ -63,6 +63,7 @@
 - [35.[easy]搜索插入位置](leetCode/35.[easy]搜索插入位置.js)
 - [704.[easy]二分查找](leetCode/704.[easy]二分查找.js)
 - [34.[medium]在排序数组中查找元素的第一个和最后一个位置](leetCode/34.[medium]在排序数组中查找元素的第一个和最后一个位置.js)
+- [69.[easy]x 的平方根](leetCode/69.[easy]x-的平方根.js)
 
 [👆 回到顶部](#导航)
 
