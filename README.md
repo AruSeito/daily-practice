@@ -59,6 +59,7 @@
 ### 滑动窗口
 
 - [28.[easy]实现 strstr](leetCode/28.实现-str-str.js)
+- [76.[hard]最小覆盖子串](leetCode/76.[hard]最小覆盖子串.js)
 - [209.[medium]长度最小的子数组](leetCode/209.[medium]长度最小的子数组.js)
 - [904.[medium]水果成篮](leetCode/904.[medium]水果成篮.js)
 
