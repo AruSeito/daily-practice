@@ -25,6 +25,7 @@
 - [2.[medium]两数相加](./leetCode/2.[medium]两数相加.js)
 - [7.[easy]整数反转](./leetCode/7.整数反转.js)
 - [13.[easy]罗马数字转整数](./leetCode/13.罗马数字转整数.js)
+- [24.[medium]两两交换链表中的节点](leetCode/24.[medium]两两交换链表中的节点.js)
 - [54.[medium]螺旋矩阵](leetCode/54.[medium]螺旋矩阵.js)
 - [59.[medium]螺旋矩阵-ii](leetCode/59.[medium]螺旋矩阵-ii.js)
 - [821.[easy]字符的最短距离](leetCode/821.[easy]字符的最短距离.js)
