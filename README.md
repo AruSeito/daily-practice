@@ -40,6 +40,7 @@
 
 - [9.[easy]回文数](./leetCode/9.回文数.js)
 - [15.[medium]三数之和](leetCode/15.[medium]三数之和.js)
+- [18.[medium]四数之和](leetCode/18.[medium]四数之和.js)
 - [19.[medium]删除链表的倒数第 n 个节点](leetCode/19.[medium]删除链表的倒数第-n-个结点.js)
 - [26.[easy]删除有序数组中的重复项](leetCode/26.删除有序数组中的重复项.js)
 - [27.[easy]移除元素](leetCode/27.移除元素.js)
