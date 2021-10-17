@@ -59,6 +59,7 @@
 - [876.[easy]链表的中间节点](leetCode/876.链表的中间结点.js)
 - [977.[easy]有序数组的平方](leetCode/977.[easy]有序数组的平方.js)
 - [844.[easy]比较含退格的字符串](leetCode/844.[easy]比较含退格的字符串.js)
+- [剑指 offer05.[easy]替换空格](leetCode/剑指offer05.[easy]替换空格.js)
 
 [👆 回到顶部](#导航)
 
