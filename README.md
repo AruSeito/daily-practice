@@ -92,6 +92,7 @@
 - [232.[easy]用栈实现队列](leetCode/232.[easy]用栈实现队列.js)
 - [394.[medium]字符串解码](leetCode/394.[medium]字符串解码.js)
 - [946.[medium]验证栈序列](leetCode/946.[medium]验证栈序列.js)
+- [1047.[easy]删除字符串中的所有相邻重复项](leetCode/1047.[easy]删除字符串中的所有相邻重复项.js)
 - [1381.[medium]设计一个支持增量操作的栈](leetCode/1381.[medium]设计一个支持增量操作的栈.js)
 
 [👆 回到顶部](#导航)
