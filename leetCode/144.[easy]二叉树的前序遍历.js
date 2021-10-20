@@ -18,16 +18,26 @@
  * @return {number[]}
  */
 var preorderTraversal = function (root) {
-  const res = []
-  const dg = (root) => {
-    if (root === null) {
-      return null;
-    }
-    res.push(root.val);
-    dg(root.left);
-    dg(root.right);
+  // const res = []
+  // const dg = (root) => {
+  //   if (root === null) {
+  //     return null;
+  //   }
+  //   res.push(root.val);
+  //   dg(root.left);
+  //   dg(root.right);
+  // }
+  // dg(root);
+  // return res;
+  if (root === null) return [];
+  const res = [], queue = [];
+  queue.push(root);
+  while (queue.length) {
+    const node = queue.pop();
+    res.push(node.val);
+    if (node.right) queue.push(node.right);
+    if (node.left) queue.push(node.left);
   }
-  dg(root);
   return res;
 };
 // @lc code=end

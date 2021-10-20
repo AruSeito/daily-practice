@@ -142,6 +142,7 @@
 - [105.[medium]从前序与中序遍历序列构建二叉树](leetCode/105.[medium]从前序与中序遍历序列构造二叉树.js)
 - [106.[medium]从中序与后序遍历序列构建二叉树](leetCode/106.[medium]从中序与后序遍历序列构造二叉树.js)
 - [114.[medium]二叉树展开为链表](leetCode/114.[medium]二叉树展开为链表.js)
+- [144.[easy]二叉树的前序遍历](leetCode/144.[easy]二叉树的前序遍历.js)
 - [145.[easy]二叉树的后序遍历](leetCode/145.[easy]二叉树的后序遍历.js)
 - [116.[medium]填充每个节点的下一个右指针](leetCode/116.[medium]填充每个节点的下一个右侧节点指针.js)
 - [144.[easy]二叉树的前序遍历](leetCode/144.[easy]二叉树的前序遍历.js)
