@@ -18,18 +18,28 @@
  * @return {number[]}
  */
 var postorderTraversal = function (root) {
-  const res = [];
-  const dg = (root) => {
-    if (root === null) {
-      return null;
-    }
-    dg(root.left);
-    dg(root.right);
-    res.push(root.val);
-  }
+  // const res = [];
+  // const dg = (root) => {
+  //   if (root === null) {
+  //     return null;
+  //   }
+  //   dg(root.left);
+  //   dg(root.right);
+  //   res.push(root.val);
+  // }
 
-  dg(root);
-  return res;
+  // dg(root);
+  // return res;
+  if (root === null) return [];
+  const res = [], queue = [];
+  queue.push(root);
+  while (queue.length) {
+    const node = queue.pop();
+    res.push(node.val);
+    if (node.left) queue.push(node.left);
+    if (node.right) queue.push(node.right);
+  }
+  return res.reverse();
 };
 // @lc code=end
 
