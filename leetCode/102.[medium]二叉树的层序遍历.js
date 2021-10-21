@@ -17,21 +17,44 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
-var levelOrder = function (root) {
-  let res = [];
+// var levelOrder = function (root) {
+//   let res = [];
 
-  const dg = (root, depth) => {
-    if (root) {
-      if (!res[depth]) {
-        res[depth] = [];
-      }
-      dg(root.left, depth + 1)
-      res[depth].push(root.val)
-      dg(root.right, depth + 1)
-    }
+//   const dg = (root, depth) => {
+//     if (root) {
+//       if (!res[depth]) {
+//         res[depth] = [];
+//       }
+//       dg(root.left, depth + 1)
+//       res[depth].push(root.val)
+//       dg(root.right, depth + 1)
+//     }
+//   }
+//   dg(root, 0)
+//   return res;
+// };
+var levelOrder = function (root) {
+  let queue = [], res = [];
+  queue.push(root);
+  if (root === null) {
+    return res;
   }
-  dg(root, 0)
+  while (queue.length) {
+    let curLen = queue.length;
+    let curLevel = [];
+    for (let i = 0; i < curLen; i++) {
+      let node = queue.shift();
+      curLevel.push(node.val);
+      node.left && queue.push(node.left);
+      node.right && queue.push(node.right);
+    }
+    res.push(curLevel);
+  }
   return res;
 };
 // @lc code=end
 
+
+// @after-stub-for-debug-begin
+module.exports = levelOrder;
+// @after-stub-for-debug-end
