@@ -154,6 +154,7 @@
 - [429.[medium]n-叉树的层序遍历](leetCode/429.[medium]n-叉树的层序遍历.js)
 - [513.[二叉树]找树左下角的值](leetCode/513.[medium]找树左下角的值.js)
 - [515.[medium]在每个树行中找最大值](leetCode/515.[medium]在每个树行中找最大值.js)
+- [589.[easy]n-叉树的前序遍历](leetCode/589.[easy]n-叉树的前序遍历.js)
 - [637.[easy]二叉树的层平均值](leetCode/637.[easy]二叉树的层平均值.js)
 - [652.[medium]寻找重复的子树](leetCode/652.[medium]寻找重复的子树.js)
 - [654.[medium]最大二叉树](leetCode/654.[medium]最大二叉树.js)
