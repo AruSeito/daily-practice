@@ -23,17 +23,49 @@
  * @return {TreeNode}
  */
 var invertTree = function (root) {
+  // 深度优先（递归版）
+  // if (root === null) return root;
+  // const tmp = root.left;
+  // root.left = root.right;
+  // root.right = tmp;
+  // invertTree(root.left);
+  // invertTree(root.right);
+  // return root;
 
-  const dg = (root) => {
-    if (!root) return root;
-    const tmp = root.left;
-    root.left = root.right;
-    root.right = tmp;
-    dg(root.left);
-    dg(root.right);
+  // 深度优先（迭代版）
+  // const queue = [], res = root;
+  // if (root === null) {
+  //   return root;
+  // }
+  // queue.push(root);
+  // while (queue.length) {
+  //   const node = queue.pop();
+  //   const tmp = node.left;
+  //   node.left = node.right;
+  //   node.right = tmp;
+  //   node.right && queue.push(node.right);
+  //   node.left && queue.push(node.left);
+  // }
+  // return res;
+
+  // 广度优先
+  const queue = [], res = root;
+  if (root === null) {
+    return res;
   }
-  dg(root)
-  return root;
+  queue.push(root);
+  while (queue.length) {
+    const length = queue.length;
+    for (let i = 0; i < length; i++) {
+      const node = queue.shift();
+      const tmp = node.left;
+      node.left = node.right;
+      node.right = tmp;
+      node.left && queue.push(node.left);
+      node.right && queue.push(node.right);
+    }
+  }
+  return res;
 };
 // @lc code=end
 
