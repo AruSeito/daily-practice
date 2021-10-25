@@ -137,6 +137,7 @@
 ### 二叉树
 
 - [94.[easy]二叉树的中序遍历](leetCode/94.[easy]二叉树的中序遍历.js)
+- [101.[easy]对称二叉树](leetCode/101.[easy]对称二叉树.js)
 - [102.[medium]二叉树的层序遍历](leetCode/102.[medium]二叉树的层序遍历.js)
 - [104.[easy]二叉树的最大深度](leetCode/104.[easy]二叉树的最大深度.js)
 - [105.[medium]从前序与中序遍历序列构建二叉树](leetCode/105.[medium]从前序与中序遍历序列构造二叉树.js)
