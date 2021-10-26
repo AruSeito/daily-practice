@@ -23,7 +23,21 @@
  * @return {number}
  */
 var countNodes = function (root) {
+  // if (root === null) return 0;
+  // return 1 + countNodes(root.left) + countNodes(root.right);
   if (root === null) return 0;
-  return 1 + countNodes(root.left) + countNodes(root.right);
+  const queue = []
+  let sum = 0;
+  queue.push(root);
+  while (queue.length) {
+    const length = queue.length;
+    for (let i = 0; i < length; i++) {
+      const node = queue.shift();
+      sum++;
+      node.left && queue.push(node.left);
+      node.right && queue.push(node.right);
+    }
+  }
+  return sum;
 };
 // @lc code=end
