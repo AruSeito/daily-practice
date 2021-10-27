@@ -153,6 +153,7 @@
 - [199.[medium]二叉树的右视图](leetCode/199.[medium]二叉树的右视图.js)
 - [222.[medium]完全二叉树的节点个数](leetCode/222.[medium]完全二叉树的节点个数.js)
 - [236.[easy]翻转二叉树](leetCode/226.[easy]翻转二叉树.js)
+- [404.[easy]左叶子之和](leetCode/404.[easy]左叶子之和.js)
 - [429.[medium]n-叉树的层序遍历](leetCode/429.[medium]n-叉树的层序遍历.js)
 - [513.[二叉树]找树左下角的值](leetCode/513.[medium]找树左下角的值.js)
 - [515.[medium]在每个树行中找最大值](leetCode/515.[medium]在每个树行中找最大值.js)
