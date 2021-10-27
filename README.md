@@ -168,6 +168,7 @@
 
 - [28.实现-str-str](leetCode/28.实现-str-str.js)
 - [459.[easy]重复的子字符串](leetCode/459.[easy]重复的子字符串.js)
+- [257.[easy]二叉树的所有路径](leetCode/257.[easy]二叉树的所有路径.js)
 
 ### 排序
 
