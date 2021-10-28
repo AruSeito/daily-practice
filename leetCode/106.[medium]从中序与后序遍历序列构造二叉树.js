@@ -18,27 +18,42 @@
  * @param {number[]} postorder
  * @return {TreeNode}
  */
+
+
+// function TreeNode(val, left, right) {
+//   this.val = (val === undefined ? 0 : val)
+//   this.left = (left === undefined ? null : left)
+//   this.right = (right === undefined ? null : right)
+// }
+
+const build = (inorder, postorder) => {
+  if (postorder.length === 0) return null;
+
+  const rootVal = postorder[postorder.length - 1];
+  const rootNode = new TreeNode(rootVal);
+
+
+  const index = inorder.indexOf(rootVal);
+  const leftInorder = inorder.slice(0, index);
+  const rightInorder = inorder.slice(index + 1, inorder.length);
+
+  const leftPostorder = postorder.slice(0, index);
+  const rightPostOrder = postorder.slice(index, postorder.length - 1);
+
+  rootNode.left = build(leftInorder, leftPostorder);
+  rootNode.right = build(rightInorder, rightPostOrder);
+
+  return rootNode;
+
+
+}
 var buildTree = function (inorder, postorder) {
-  const build = (inorder, il, ir, postorder, pl, pr) => {
-    if (il > ir) return null;
-
-    const rootValue = postorder[pr];
-    let index = -1;
-    for (let i = il; i <= ir; i++) {
-      if (inorder[i] === rootValue) {
-        index = i;
-        break;
-      }
-    }
-    const leftNumber = index - il;
-    let root = new TreeNode(rootValue);
-    root.left = build(inorder, il, index - 1, postorder, pl, pl + leftNumber - 1);
-    root.right = build(inorder, index + 1, ir, postorder, pl + leftNumber, pr - 1);
-    return root;
-  }
-
-  return build(inorder, 0, inorder.length - 1, postorder, 0, postorder.length - 1)
-
+  if (inorder.length === 0 || postorder === 0) return null;
+  return build(inorder, postorder);
 };
 // @lc code=end
 
+
+// @after-stub-for-debug-begin
+module.exports = buildTree;
+// @after-stub-for-debug-end
