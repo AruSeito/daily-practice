@@ -153,6 +153,7 @@
 - [145.[easy]二叉树的后序遍历](leetCode/145.[easy]二叉树的后序遍历.js)
 - [199.[medium]二叉树的右视图](leetCode/199.[medium]二叉树的右视图.js)
 - [222.[medium]完全二叉树的节点个数](leetCode/222.[medium]完全二叉树的节点个数.js)
+- [235.[easy]二叉搜索树的最近公共祖先](leetCode/235.[easy]二叉搜索树的最近公共祖先.js)
 - [236.[easy]翻转二叉树](leetCode/226.[easy]翻转二叉树.js)
 - [404.[easy]左叶子之和](leetCode/404.[easy]左叶子之和.js)
 - [429.[medium]n-叉树的层序遍历](leetCode/429.[medium]n-叉树的层序遍历.js)
