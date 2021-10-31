@@ -167,6 +167,7 @@
 - [637.[easy]二叉树的层平均值](leetCode/637.[easy]二叉树的层平均值.js)
 - [652.[medium]寻找重复的子树](leetCode/652.[medium]寻找重复的子树.js)
 - [654.[medium]最大二叉树](leetCode/654.[medium]最大二叉树.js)
+- [669.[medium]修剪二叉搜索树](leetCode/669.[medium]修剪二叉搜索树.js)
 - [700.[easy]二叉搜索树中的搜索](leetCode/700.[easy]二叉搜索树中的搜索.js)
 - [701.[medium]二叉搜索树中的插入操作](leetCode/701.[medium]二叉搜索树中的插入操作.js)
 
