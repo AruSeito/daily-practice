@@ -179,6 +179,7 @@
 
 - [17.[medium]电话号码的字母组合](leetCode/17.[medium]电话号码的字母组合.js)
 - [28.实现-str-str](leetCode/28.实现-str-str.js)
+- [39.[medium]组合总和](leetCode/39.[medium]组合总和.js)
 - [77.[medium]组合](leetCode/77.[medium]组合.js)
 - [112.[easy]路径总和](leetCode/112.[easy]路径总和.js)
 - [113.[medium]路径总和-ii](leetCode/113.[medium]路径总和-ii.js)
