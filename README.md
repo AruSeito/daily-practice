@@ -182,6 +182,7 @@
 - [39.[medium]组合总和](leetCode/39.[medium]组合总和.js)
 - [40.[medium]组合总和-ii](leetCode/40.[medium]组合总和-ii.js)
 - [46.[medium]全排列](leetCode/46.[medium]全排列.js)
+- [47.[medium]全排列-ii](leetCode/47.[medium]全排列-ii.js)
 - [77.[medium]组合](leetCode/77.[medium]组合.js)
 - [78.[medium]子集](leetCode/78.[medium]子集.js)
 - [90.[medium]子集-ii](leetCode/90.[medium]子集-ii.js)
