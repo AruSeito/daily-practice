@@ -193,6 +193,7 @@
 - [216.[medium]组合总和-iii](leetCode/216.[medium]组合总和-iii.js)
 - [236.[medium]二叉树的最近公共祖先](leetCode/236.[medium]二叉树的最近公共祖先.js)
 - [257.[easy]二叉树的所有路径](leetCode/257.[easy]二叉树的所有路径.js)
+- [332.[medium]重新安排行程](leetCode/332.[medium]重新安排行程.js)
 - [459.[easy]重复的子字符串](leetCode/459.[easy]重复的子字符串.js)
 - [491.[medium]递增子序列](leetCode/491.[medium]递增子序列.js)
 
