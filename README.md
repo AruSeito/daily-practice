@@ -202,6 +202,7 @@
 
 ### 贪心算法
 
+- [53.[easy]最大子序和](leetCode/53.[easy]最大子序和.js)
 - [376.[medium]摆动序列](leetCode/376.[medium]摆动序列.js)
 - [455.[easy]分发饼干](leetCode/455.[easy]分发饼干.js)
 
