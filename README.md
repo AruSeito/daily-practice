@@ -208,6 +208,7 @@
 - [122.[medium]买卖股票的最佳时机-ii](leetCode/122.[medium]买卖股票的最佳时机-ii.js)
 - [376.[medium]摆动序列](leetCode/376.[medium]摆动序列.js)
 - [455.[easy]分发饼干](leetCode/455.[easy]分发饼干.js)
+- [1005.[easy]k-次取反后最大化的数组和](leetCode/1005.[easy]k-次取反后最大化的数组和.js)
 
 ### 排序
 
