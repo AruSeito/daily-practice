@@ -202,6 +202,7 @@
 
 ### 贪心算法
 
+- [45.[medium]跳跃游戏-ii](leetCode/45.[medium]跳跃游戏-ii.js)
 - [53.[easy]最大子序和](leetCode/53.[easy]最大子序和.js)
 - [55.[medium]跳跃游戏](leetCode/55.[medium]跳跃游戏.js)
 - [122.[medium]买卖股票的最佳时机-ii](leetCode/122.[medium]买卖股票的最佳时机-ii.js)
