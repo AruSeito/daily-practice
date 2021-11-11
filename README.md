@@ -205,6 +205,7 @@
 - [45.[medium]跳跃游戏-ii](leetCode/45.[medium]跳跃游戏-ii.js)
 - [53.[easy]最大子序和](leetCode/53.[easy]最大子序和.js)
 - [55.[medium]跳跃游戏](leetCode/55.[medium]跳跃游戏.js)
+- [56.[medium]合并区间](leetCode/56.[medium]合并区间.js)
 - [122.[medium]买卖股票的最佳时机-ii](leetCode/122.[medium]买卖股票的最佳时机-ii.js)
 - [134.[medium]加油站](leetCode/134.[medium]加油站.js)
 - [135.[hard]分发糖果](leetCode/135.[hard]分发糖果.js)
