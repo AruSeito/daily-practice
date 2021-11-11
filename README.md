@@ -210,6 +210,7 @@
 - [135.[hard]分发糖果](leetCode/135.[hard]分发糖果.js)
 - [376.[medium]摆动序列](leetCode/376.[medium]摆动序列.js)
 - [406.[medium]根据身高重建队列](leetCode/406.[medium]根据身高重建队列.js)
+- [452.[medium]用最少数量的箭引爆气球](leetCode/452.[medium]用最少数量的箭引爆气球.js)
 - [455.[easy]分发饼干](leetCode/455.[easy]分发饼干.js)
 - [860.[easy]柠檬水找零](leetCode/860.[easy]柠檬水找零.js)
 - [1005.[easy]k-次取反后最大化的数组和](leetCode/1005.[easy]k-次取反后最大化的数组和.js)
@@ -231,5 +232,7 @@
 - [eventBus](./others/EventEmit/evnetBus.js)
 
 - [手写 Promise](./others/Promise/promise.js)
+
+- [pwa](others/pwa/sw.js)
 
 [👆 回到顶部](#导航)
