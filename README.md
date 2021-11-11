@@ -213,6 +213,7 @@
 - [435.[medium]无重叠区间](leetCode/435.[medium]无重叠区间.js)
 - [452.[medium]用最少数量的箭引爆气球](leetCode/452.[medium]用最少数量的箭引爆气球.js)
 - [455.[easy]分发饼干](leetCode/455.[easy]分发饼干.js)
+- [763.[medium]划分字母区间](leetCode/763.[medium]划分字母区间.js)
 - [860.[easy]柠檬水找零](leetCode/860.[easy]柠檬水找零.js)
 - [1005.[easy]k-次取反后最大化的数组和](leetCode/1005.[easy]k-次取反后最大化的数组和.js)
 
