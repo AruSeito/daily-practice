@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>测试页面</title>
+  </head>
+  <body>
+    <button onclick="openOnBridge()">测试</button>
+    <script>
+      const eventMap = new Map();
+
+      const ws = new WebSocket("ws://127.0.0.1:8081");
+      ws.onopen = () => {
+        console.log("链接了");
+      };
+      ws.onmessage = (e) => {
+        console.log("客户端接收到了", e);
+        if (e.data && eventMap.has(e.data)) {
+          const cb = eventMap.get(e.data);
+          cb();
+        }
+      };
+
+      function sendMessage(config) {
+        const id = new Date().getTime().toString();
+        if (config.success) {
+          eventMap.set(id, config.success);
+        }
+        let url = `jsbridge://test.api.${config.apiName}/`;
+        if (id) {
+          url += `?successcb=${id}`;
+        }
+
+        if (!ws) {
+          throw new Error("还没链接呢");
+        }
+        ws.send(url);
+      }
+
+      function openOnBridge() {
+        const config = {
+          apiName: "openCamera",
+          success: () => {
+            console.log("success");
+          },
+          failed: () => {
+            console.log("failed");
+          },
+        };
+        sendMessage(config);
+      }
+    </script>
+  </body>
+</html>
