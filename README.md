@@ -1,6 +1,7 @@
 # 导航
 
 - [React](#React)
+- [Vue](#Vue)
 - [LeetCode](#LeetCode)
   - [模拟](#模拟)
   - [双指针](#双指针)
@@ -20,6 +21,10 @@
 - [虚拟列表](./my-react-app/src/component/VirtualList.jsx)
 
 [👆 回到顶部](#导航)
+
+## Vue
+
+- [使用 plugin 在 Vue 中挂载 React 组件](my-vue-app/plugin_plus.html)
 
 ## LeetCode
 

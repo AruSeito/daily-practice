@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      console.log(Vue.config.optionMergeStrategies);
+
+      // 保留原合并策略
+      const optionMergeStrategies = Vue.config.optionMergeStrategies;
+
+      // 定义exit方法，使用create策略
+      optionMergeStrategies.exit = optionMergeStrategies.created;
+
+      const notify = (name, vm) => {
+        const liftCycles = vm.$options[name];
+        if (liftCycles && liftCycles.length) {
+          liftCycles.forEach((lc) => lc.call(vm));
+        }
+
+        const children = vm.$children;
+
+        if (children && children.length) {
+          children.forEach((child) => notify(name, child));
+        }
+      };
+
+      const bind = (vm) => {
+        window.addEventListener("visibilitychange", () => {
+          if (document.visibilityState === "hidden") {
+            notify("exit", vm);
+          }
+        });
+      };
+
+      const vm = new Vue({
+        el: document.querySelector("#root"),
+        template: `<h1>hello</h1>`,
+        exit() {
+          alert("那我走？");
+        },
+      });
+
+      bind(vm);
+    </script>
+  </body>
+</html>
