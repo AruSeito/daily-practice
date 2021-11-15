@@ -235,6 +235,7 @@
 
 - [70.[easy]爬楼梯](leetCode/70.[easy]爬楼梯.js)
 - [509.[easy]斐波那契数](leetCode/509.[easy]斐波那契数.js)
+- [746.[easy]使用最小花费爬楼梯](leetCode/746.[easy]使用最小花费爬楼梯.js)
 
 [👆 回到顶部](#导航)
 
