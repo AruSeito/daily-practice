@@ -223,6 +223,7 @@
 - [738.[medium]单调递增的数字](leetCode/738.[medium]单调递增的数字.js)
 - [763.[medium]划分字母区间](leetCode/763.[medium]划分字母区间.js)
 - [860.[easy]柠檬水找零](leetCode/860.[easy]柠檬水找零.js)
+- [881.[medium]救生艇](leetCode/881.[medium]救生艇.js)
 - [1005.[easy]k-次取反后最大化的数组和](leetCode/1005.[easy]k-次取反后最大化的数组和.js)
 
 ### 排序
