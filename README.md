@@ -233,6 +233,7 @@
 
 ### 动态规划
 
+- [62.[medium]不同路径](leetCode/62.[medium]不同路径.js)
 - [70.[easy]爬楼梯](leetCode/70.[easy]爬楼梯.js)
 - [509.[easy]斐波那契数](leetCode/509.[easy]斐波那契数.js)
 - [746.[easy]使用最小花费爬楼梯](leetCode/746.[easy]使用最小花费爬楼梯.js)
@@ -262,4 +263,5 @@
 - [jsBridge 简易版](others/jsBridge/index.js)
 
 - [hashRouter 简易版](others/hashRouter/index.js)
+
   [👆 回到顶部](#导航)
