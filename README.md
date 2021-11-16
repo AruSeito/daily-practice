@@ -236,6 +236,7 @@
 - [62.[medium]不同路径](leetCode/62.[medium]不同路径.js)
 - [63.[medium]不同路径-ii](leetCode/63.[medium]不同路径-ii.js)
 - [70.[easy]爬楼梯](leetCode/70.[easy]爬楼梯.js)
+- [343.[medium]整数拆分](leetCode/343.[medium]整数拆分.js)
 - [509.[easy]斐波那契数](leetCode/509.[easy]斐波那契数.js)
 - [746.[easy]使用最小花费爬楼梯](leetCode/746.[easy]使用最小花费爬楼梯.js)
 
