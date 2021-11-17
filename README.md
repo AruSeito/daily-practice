@@ -238,6 +238,7 @@
 - [70.[easy]爬楼梯](leetCode/70.[easy]爬楼梯.js)
 - [96.[medium]不同的二叉搜索树](leetCode/96.[medium]不同的二叉搜索树.js)
 - [343.[medium]整数拆分](leetCode/343.[medium]整数拆分.js)
+- [416.[medium]分割等和子集](leetCode/416.[medium]分割等和子集.js)
 - [509.[easy]斐波那契数](leetCode/509.[easy]斐波那契数.js)
 - [746.[easy]使用最小花费爬楼梯](leetCode/746.[easy]使用最小花费爬楼梯.js)
 
