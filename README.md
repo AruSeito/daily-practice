@@ -237,6 +237,7 @@
 - [63.[medium]不同路径-ii](leetCode/63.[medium]不同路径-ii.js)
 - [70.[easy]爬楼梯](leetCode/70.[easy]爬楼梯.js)
 - [96.[medium]不同的二叉搜索树](leetCode/96.[medium]不同的二叉搜索树.js)
+- [121.[easy]买卖股票的最佳时机](leetCode/121.[easy]买卖股票的最佳时机.js)
 - [139.[medium]单词拆分](leetCode/139.[medium]单词拆分.js)
 - [198.[medium]打家劫舍](leetCode/198.[medium]打家劫舍.js)
 - [213.[medium]打家劫舍-ii](leetCode/213.[medium]打家劫舍-ii.js)
