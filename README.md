@@ -238,6 +238,7 @@
 - [70.[easy]爬楼梯](leetCode/70.[easy]爬楼梯.js)
 - [96.[medium]不同的二叉搜索树](leetCode/96.[medium]不同的二叉搜索树.js)
 - [139.[medium]单词拆分](leetCode/139.[medium]单词拆分.js)
+- [198.[medium]打家劫舍](leetCode/198.[medium]打家劫舍.js)
 - [279.[medium]完全平方数](leetCode/279.[medium]完全平方数.js)
 - [322.[medium]零钱兑换](leetCode/322.[medium]零钱兑换.js)
 - [343.[medium]整数拆分](leetCode/343.[medium]整数拆分.js)
