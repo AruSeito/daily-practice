@@ -23,24 +23,26 @@
  * @param {number[]} nums
  * @return {TreeNode}
  */
-var constructMaximumBinaryTree = function (nums) {
-  const build = (nums, left, right) => {
-    if (left > right) return null;
-    let max = -1,
-      index = -1;
-    for (let i = left; i <= right; i++) {
-      if (nums[i] > max) {
-        max = nums[i];
-        index = i;
-      }
-    }
-    let root = new TreeNode(max);
+const build = (nums) => {
+  if (nums.length === 0) return null;
+  const maxVal = Math.max(...nums);
+  const rootNode = new TreeNode(maxVal);
 
-    root.left = build(nums, left, index - 1);
-    root.right = build(nums, index + 1, right);
-    return root;
-  };
-  return build(nums, 0, nums.length - 1);
+  if (nums.length === 1) return rootNode;
+
+  const index = nums.indexOf(maxVal);
+  const leftVals = nums.slice(0, index);
+  const rightVals = nums.slice(index + 1, nums.length);
+
+  rootNode.left = build(leftVals);
+  rootNode.right = build(rightVals);
+
+  return rootNode;
+}
+
+var constructMaximumBinaryTree = function (nums) {
+  if (nums.length === 0) return null;
+  return build(nums);
 };
 // @lc code=end
 

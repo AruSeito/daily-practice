@@ -24,47 +24,28 @@
  * @param {number[]} inorder
  * @return {TreeNode}
  */
-var buildTree = function (preorder, inorder) {
-  const build = (preorder, pl, pr, inorder, il, ir) => {
-    if (pl > pr) {
-      return null;
-    }
-    let rootValue = preorder[pl];
-    let index = -1;
-    for (let i = il; i <= ir; i++) {
-      if (inorder[i] === rootValue) {
-        index = i;
-        break;
-      }
-    }
-    let root = new TreeNode(rootValue);
+const build = (preorder, inorder) => {
+  if (preorder.length === 0 || inorder.length === 0) return null;
+  const rootVal = preorder[0];
+  const rootNode = new TreeNode(rootVal);
 
-    const leftNumber = index - il;
-    root.left = build(
-      preorder,
-      pl + 1,
-      pl + leftNumber,
-      inorder,
-      il,
-      index - 1
-    );
-    root.right = build(
-      preorder,
-      pl + leftNumber + 1,
-      pr,
-      inorder,
-      index + 1,
-      ir
-    );
-    return root;
-  };
-  return build(
-    preorder,
-    0,
-    preorder.length - 1,
-    inorder,
-    0,
-    inorder.length - 1
-  );
+  if (preorder.length === 1 || inorder.length === 1) return rootNode;
+
+  const index = inorder.indexOf(rootVal);
+  const leftInorder = inorder.slice(0, index);
+  const rightInorder = inorder.slice(index + 1, inorder.length);
+
+  const leftPreorder = preorder.slice(1, index + 1);
+  const rightPreorder = preorder.slice(index + 1, preorder.length);
+
+  rootNode.left = build(leftPreorder, leftInorder);
+  rootNode.right = build(rightPreorder, rightInorder);
+
+  return rootNode;
+
+}
+var buildTree = function (preorder, inorder) {
+  if (preorder.length === 0 || inorder.length === 0) return null;
+  return build(preorder, inorder)
 };
 // @lc code=end
