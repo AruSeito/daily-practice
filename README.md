@@ -258,6 +258,7 @@
 - [494.[medium]目标和](leetCode/494.[medium]目标和.js)
 - [509.[easy]斐波那契数](leetCode/509.[easy]斐波那契数.js)
 - [518.[medium]零钱兑换-ii](leetCode/518.[medium]零钱兑换-ii.js)
+- [674.[easy]最长连续递增序列](leetCode/674.[easy]最长连续递增序列.js)
 - [714.[medium]买卖股票的最佳时机含手续费](leetCode/714.[medium]买卖股票的最佳时机含手续费.js)
 - [746.[easy]使用最小花费爬楼梯](leetCode/746.[easy]使用最小花费爬楼梯.js)
 - [1049.[medium]最后一块石头的重量-ii](leetCode/1049.[medium]最后一块石头的重量-ii.js)
