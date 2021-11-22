@@ -233,6 +233,7 @@
 
 ### 动态规划
 
+- [53.[easy]最大子序和](leetCode/53.[easy]最大子序和.js)
 - [62.[medium]不同路径](leetCode/62.[medium]不同路径.js)
 - [63.[medium]不同路径-ii](leetCode/63.[medium]不同路径-ii.js)
 - [70.[easy]爬楼梯](leetCode/70.[easy]爬楼梯.js)
