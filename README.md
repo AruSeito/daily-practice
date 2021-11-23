@@ -253,6 +253,7 @@
 - [337.[medium]打家劫舍-iii](leetCode/337.[medium]打家劫舍-iii.js)
 - [343.[medium]整数拆分](leetCode/343.[medium]整数拆分.js)
 - [377.[medium]组合总和-ⅳ](leetCode/377.[medium]组合总和-ⅳ.js)
+- [392.[easy]判断子序列](leetCode/392.[easy]判断子序列.js)
 - [416.[medium]分割等和子集](leetCode/416.[medium]分割等和子集.js)
 - [474.[medium]一和零](leetCode/474.[medium]一和零.js)
 - [494.[medium]目标和](leetCode/494.[medium]目标和.js)
