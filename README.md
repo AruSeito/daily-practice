@@ -260,6 +260,7 @@
 - [494.[medium]目标和](leetCode/494.[medium]目标和.js)
 - [509.[easy]斐波那契数](leetCode/509.[easy]斐波那契数.js)
 - [518.[medium]零钱兑换-ii](leetCode/518.[medium]零钱兑换-ii.js)
+- [583.[medium]两个字符串的删除操作](leetCode/583.[medium]两个字符串的删除操作.js)
 - [674.[easy]最长连续递增序列](leetCode/674.[easy]最长连续递增序列.js)
 - [714.[medium]买卖股票的最佳时机含手续费](leetCode/714.[medium]买卖股票的最佳时机含手续费.js)
 - [718.[medium]最长重复子数组](leetCode/718.[medium]最长重复子数组.js)
