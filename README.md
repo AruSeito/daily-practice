@@ -261,6 +261,7 @@
 - [474.[medium]一和零](leetCode/474.[medium]一和零.js)
 - [494.[medium]目标和](leetCode/494.[medium]目标和.js)
 - [509.[easy]斐波那契数](leetCode/509.[easy]斐波那契数.js)
+- [516.[medium]最长回文子序列](leetCode/516.[medium]最长回文子序列.js)
 - [518.[medium]零钱兑换-ii](leetCode/518.[medium]零钱兑换-ii.js)
 - [583.[medium]两个字符串的删除操作](leetCode/583.[medium]两个字符串的删除操作.js)
 - [647.[medium]回文子串](leetCode/647.[medium]回文子串.js)
