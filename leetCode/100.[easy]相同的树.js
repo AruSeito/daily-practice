@@ -47,4 +47,3 @@ var isSameTree = function (p, q) {
   return true;
 };
 // @lc code=end
-
