@@ -239,6 +239,7 @@
 - [62.[medium]不同路径](leetCode/62.[medium]不同路径.js)
 - [63.[medium]不同路径-ii](leetCode/63.[medium]不同路径-ii.js)
 - [70.[easy]爬楼梯](leetCode/70.[easy]爬楼梯.js)
+- [72.[hard]编辑距离](leetCode/72.[hard]编辑距离.js)
 - [96.[medium]不同的二叉搜索树](leetCode/96.[medium]不同的二叉搜索树.js)
 - [115.[hard]不同的子序列](leetCode/115.[hard]不同的子序列.js)
 - [121.[easy]买卖股票的最佳时机](leetCode/121.[easy]买卖股票的最佳时机.js)
