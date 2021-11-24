@@ -235,6 +235,7 @@
 
 ### 动态规划
 
+- [42.[hard]接雨水](leetCode/42.[hard]接雨水.js)
 - [53.[easy]最大子序和](leetCode/53.[easy]最大子序和.js)
 - [62.[medium]不同路径](leetCode/62.[medium]不同路径.js)
 - [63.[medium]不同路径-ii](leetCode/63.[medium]不同路径-ii.js)
