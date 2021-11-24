@@ -109,6 +109,7 @@
 ### 单调栈
 
 - [42.[hard]接雨水.js](leetCode/42.[hard]接雨水.js)
+- [84.[hard]柱状图中最大的矩形](leetCode/84.[hard]柱状图中最大的矩形.js)
 - [239.[hard]滑动窗口最大值](leetCode/239.[hard]滑动窗口最大值.js)
 - [316.[medium]去除重复字母](leetCode/316.[medium]去除重复字母.js)
 - [402.[medium]移掉 K 位数字](leetCode/402.[medium]移掉-k-位数字.js)
