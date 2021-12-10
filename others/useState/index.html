@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let isMount = true; // 用来标记是首次渲染还是更新
+      let workInProgressHook = null ; // 保存当前执行的hook
+
+      const fiber = {
+        memoizedState: null, // 用来保存hooks
+        stateNode: App, // 保存对应的组件
+      };
+      function run() {
+        // render阶段
+        const app = fiber.stateNode;
+        // hook初始化
+        workInProgressHook = fiber.memoizedState;
+        // commit阶段
+        isMount = false;
+        return app;
+      }
+
+      function useState(initState) {
+        let hook;
+
+        if(isMount){
+          hook = {
+            queue:{
+              pending:null
+            },
+            memoizedState:initState,
+            next:null
+          }
+          // 判断fiber上是否存在hook未执行，如果不存在就把新建的放上去
+          if(!fiber.memoizedState){
+            fiber.memoizedState = hook;
+          }else{
+            // 如果存在就拼在后面
+            fiber.memoizedState.next = hook;
+          }
+          // 保存当前的hook;
+          workInProgressHook = hook;
+        }else{
+          // 如果在更新阶段，取出当前需要执行的hook
+          hook = workInProgressHook;
+          workInProgressHook = workInProgressHook.next;
+        }
+
+        let baseState = hook.memoizedState;
+
+        if(hook.queue.pending){
+          // 如果存在代表有需要执行的hook
+          let firstUpdate = hook.queue.pending.next;
+
+          do{
+            const action = firstUpdate.action; // 取出useState的方法，react里的useState可以传入两种：值和函数，这里简化了，只支持传入函数
+            baseState = action(baseState) //计算出新的baseState
+            firstUpdate = firstUpdate.next;
+          }while(firstUpdate !== hook.queue.pending.next) // 直到它不等于第一个 update 为止
+          hook.queue.pending = null; //计算完了
+        }
+        hook.memoizedState = baseState;
+
+        return [baseState, dispatchAction];
+      }
+
+      function App() {
+        const [num, setNum] = useState(0);
+
+        // 为了足够简单，不返回jsx，直接返回一个对象来模拟组件被点击的效果
+        return {
+          onClick() {
+            setNum((num) => num + 1);
+          },
+        };
+      }
+
+      window.app = run();
+    </script>
+  </body>
+</html>
