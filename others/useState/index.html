@@ -12,7 +12,7 @@
       let workInProgressHook = null; // 保存当前执行的hook
 
       const fiber = {
-        memoizedState: null, // 用来保存hooks
+        memoizedState: null, // 用来保存需要执行的 hooks
         stateNode: App, // 保存对应的组件
       };
 
@@ -29,8 +29,10 @@
       // 创建 update，并形成环状链表
       function dispatchAction(queue, action) {
         // 创建 update
+         const xAction =
+          typeof action === 'function' ? action : () => action;
         const update = {
-          action,
+          action:xAction,
           next: null,
         };
 
@@ -87,7 +89,7 @@
             const action = firstUpdate.action; // 取出useState的方法，react里的useState可以传入两种：值和函数，这里简化了，只支持传入函数
             baseState = action(baseState); //计算出新的baseState
             firstUpdate = firstUpdate.next;
-          } while (firstUpdate !== hook.queue.pending.next); // 直到它不等于第一个 update 为止
+          } while (firstUpdate !== hook.queue.pending.next); // 直到它不等于第一个 update 为止,因为这个地方是个环。
           hook.queue.pending = null; //计算完了
         }
         hook.memoizedState = baseState;
