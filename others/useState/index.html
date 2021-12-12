@@ -29,10 +29,9 @@
       // 创建 update，并形成环状链表
       function dispatchAction(queue, action) {
         // 创建 update
-         const xAction =
-          typeof action === 'function' ? action : () => action;
+        const xAction = typeof action === 'function' ? action : () => action;
         const update = {
-          action:xAction,
+          action: xAction,
           next: null,
         };
 
@@ -61,7 +60,8 @@
             queue: {
               pending: null,
             },
-            memoizedState: initState,
+            memoizedState:
+              typeof initState === 'function' ? initState() : initState,
             next: null,
           };
           // 判断fiber上是否存在hook未执行，如果不存在就把新建的放上去
@@ -99,18 +99,18 @@
 
       function App() {
         const [num, setNum] = useState(0);
-        const [status,toggleStatus] = useState(false);
+        const [status, toggleStatus] = useState(false);
         console.log('isMounted?', isMount);
         console.log('num:', num);
-        console.log("status",status)
+        console.log('status', status);
         // 为了足够简单，不返回jsx，直接返回一个对象来模拟组件被点击的效果
         return {
           onClick() {
             setNum((num) => num + 1);
           },
-          toggleStatus(){
-            toggleStatus((status)=>!status);
-          }
+          toggleStatus() {
+            toggleStatus((status) => !status);
+          },
         };
       }
 
