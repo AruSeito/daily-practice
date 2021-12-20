@@ -11,11 +11,13 @@ app.use(express.static("dist"));
 
 app.get("*", function (req, res) {
   const context = {};
-  const content = renderToString(createRoute("server")({location:req.url,context}))
-  console.log(content);
-  if(context.url){
+  const content = renderToString(createRoute("server")({ location: req.url, context }))
+  if (context.url) {
     return res.redirect(context.url);
-  }else{
+  } else {
+    if (context.NOT_FOUND) {
+      res.status(404);
+    }
     res.send(`<!DOCTYPE html>
     <html lang="en">
       <head>
@@ -28,7 +30,7 @@ app.get("*", function (req, res) {
     </body>
   </html>`)
   }
-  
+
 })
 
 // app.get("/", function (req, res) {

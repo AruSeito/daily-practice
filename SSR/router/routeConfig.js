@@ -1,3 +1,4 @@
+import React from "react";
 import LoginPage from "../pages/login";
 import UserPage from "../pages/user";
 import NotFoundPage from "../pages/notFound"
@@ -24,6 +25,11 @@ export default [
   {
     type: "route",
     path: "*",
-    component: NotFoundPage
+    render:({staticContext})=>{
+      if (staticContext){
+        staticContext.NOT_FOUND= true;
+      }
+      return <NotFoundPage />
+    }
   },
 ]
