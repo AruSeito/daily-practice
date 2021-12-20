@@ -1,20 +1,29 @@
-const React = require("react");
-const { renderToString } = require("react-dom/server");
+import React from "react";
+import {renderToString} from "react-dom/server"
+import App from "./app";
 
 const express = require("express");
 
 const app = express();
 const PORT = 3000;
 
-const App = class extends React.PureComponent {
-  render() {
-    return React.createElement("h1", null, "Hello,SSR");
-  }
-}
+app.use(express.static("dist"));
 
 app.get("/", function (req, res) {
-  const content = renderToString(React.createElement(App));
-  res.send(content);
+  const content = renderToString(<App />);
+  console.log(content);
+  res.send(`
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ssr</title>
+</head>
+<body>
+  <div id="root">${content}</div>
+  <script src="/client/index.js"></script>
+</body>
+</html>`);
 })
 
 
