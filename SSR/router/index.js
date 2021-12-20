@@ -22,7 +22,7 @@ export const createRoute = (type)=>(params)=>{
       </Switch>
     </Router>
   }else if(type === "server"){
-    <StaticRouter {...params}>
+    return <StaticRouter {...params}>
       <Switch>
         {routes}
       </Switch>

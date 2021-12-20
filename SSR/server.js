@@ -10,9 +10,13 @@ const PORT = 3000;
 app.use(express.static("dist"));
 
 app.get("*", function (req, res) {
-  const content = renderToString(createRoute("server")({location:req.url}))
-  res.send(`
-  <!DOCTYPE html>
+  const context = {};
+  const content = renderToString(createRoute("server")({location:req.url,context}))
+  console.log(content);
+  if(context.url){
+    return res.redirect(context.url);
+  }else{
+    res.send(`<!DOCTYPE html>
     <html lang="en">
       <head>
       <meta charset="UTF-8">
@@ -23,6 +27,8 @@ app.get("*", function (req, res) {
     <script src="/client/index.js"></script>
     </body>
   </html>`)
+  }
+  
 })
 
 // app.get("/", function (req, res) {
