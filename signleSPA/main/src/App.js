@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Link } from "react-router-dom";
-import { registerApplication, start} from "single-spa"
+import { registerApplication, start } from "single-spa"
 
 function App() {
   return (
@@ -33,9 +33,10 @@ export const createScript = (url) => {
   });
 };
 
-const loadApp =  (url,globalVal)=>{
-  return async ()=>{
-    await createScript(url +"/static/js/bundle.js");
+const loadApp = (url, globalVal) => {
+  return async () => {
+    console.log("loadApp", globalVal);
+    await createScript(url + "/static/js/bundle.js");
     return window[globalVal];
   }
 }
@@ -43,23 +44,23 @@ const loadApp =  (url,globalVal)=>{
 const apps = [
   {
     // 子应用名称
-    name:"app1",
+    name: "app1",
     // 子应用加载函数
-    app:loadApp("http://localhost:3001","app1"),
+    app: loadApp("http://localhost:3001", "app1"),
     // 当路由满足条件时，挂载子应用
-    activeWhen:location=>location.pathname.startsWith("/app1"),
+    activeWhen: location => { console.log("app1 ActiveWhen fun"); if (location.pathname.startsWith("/app1")) { console.log("app1 Will Active") } return location.pathname.startsWith("/app1"); },
     // 传给子应用的
-    customProps:{}
+    customProps: {}
   },
   {
     name: "app2",
     app: loadApp("http://localhost:3002", "app2"),
-    activeWhen: location => location.pathname.startsWith("/app2"),
+    activeWhen: location => { console.log("app2 ActiveWhen fun"); if (location.pathname.startsWith("/app2")) { console.log("app2 Will Active") } return location.pathname.startsWith("/app2"); },
     customProps: {}
   }
 ]
 
-for(let i = apps.length-1;i>=0;i--){
+for (let i = apps.length - 1; i >= 0; i--) {
   registerApplication(apps[i]);
 }
 start();
