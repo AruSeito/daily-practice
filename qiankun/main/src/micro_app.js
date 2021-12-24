@@ -1,4 +1,5 @@
-const apps = [{
+const apps = [
+{
   name: 'app1', // app name registered
   entry: '//localhost:3001',
   container: '#container',
@@ -6,7 +7,8 @@ const apps = [{
   props:{
     routerBase:"/app1"
   }
-}, {
+}, 
+{
   name: 'app2', // app name registered
   entry: '//localhost:3002',
   container: '#container',

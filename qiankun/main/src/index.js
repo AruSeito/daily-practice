@@ -4,12 +4,16 @@ import './index.css';
 import App from './App';
 import appsConfig from "./micro_app";
 import { registerMicroApps, start } from 'qiankun';
+import { BrowserRouter } from "react-router-dom";
+
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
