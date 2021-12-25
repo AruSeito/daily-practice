@@ -7,8 +7,8 @@ import { BrowserRouter } from "react-router-dom"
 
 
 function render(props) {
-  const { container } = props;
-  ReactDOM.render(<BrowserRouter basename={window.__POWERED_BY_QIANKUN__ ? '/app2' : '/'}><App /></BrowserRouter>, container ? container.querySelector('#root') : document.querySelector('#root'));
+  const { container, routerBase } = props;
+  ReactDOM.render(<BrowserRouter basename={window.__POWERED_BY_QIANKUN__ ? routerBase : '/'}><App /></BrowserRouter>, container ? container.querySelector('#root') : document.querySelector('#root'));
 }
 
 if (!window.__POWERED_BY_QIANKUN__) {
