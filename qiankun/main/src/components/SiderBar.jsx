@@ -1,14 +1,24 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from 'react';
 import { Menu } from 'antd';
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-const SiderBar = ()=>{
+const SiderBar = () => {
+  const initCurrent = useMemo(() => {
+    const pathName = window.location.pathname;
+    switch (pathName) {
+      case '/app1':
+        return '1';
+      case '/app2':
+        return '2';
+      default:
+        return '';
+    }
+  }, []);
+  const [current, updateCurrent] = useState(initCurrent);
 
-  const [current , updateCurrent] = useState(1);
-
-  const handleClick = ({ item, key, keyPath, domEvent })=>{
-    updateCurrent(key)
-  }
+  const handleClick = ({ item, key, keyPath, domEvent }) => {
+    updateCurrent(key);
+  };
 
   return (
     <Menu
@@ -25,7 +35,6 @@ const SiderBar = ()=>{
       </Menu.Item>
     </Menu>
   );
-      
-}
+};
 
 export default SiderBar;
