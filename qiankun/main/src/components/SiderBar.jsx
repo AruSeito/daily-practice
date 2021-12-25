@@ -1,6 +1,7 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Menu } from 'antd';
 import { Link } from 'react-router-dom';
+import actions from '../action';
 
 const SiderBar = () => {
   const initCurrent = useMemo(() => {
@@ -15,6 +16,14 @@ const SiderBar = () => {
     }
   }, []);
   const [current, updateCurrent] = useState(initCurrent);
+  const [userInfo,setUserInfo] = useState({userName:""});
+
+  useEffect(()=>{
+    actions.onGlobalStateChange((state)=>{
+      console.log(state);
+      setUserInfo(state.userInfo)
+    },true)
+  },[])
 
   const handleClick = ({ item, key, keyPath, domEvent }) => {
     updateCurrent(key);
@@ -27,6 +36,9 @@ const SiderBar = () => {
       selectedKeys={[current]}
       mode="inline"
     >
+      <div>
+        用户名:{userInfo.userName}
+      </div>
       <Menu.Item key="1">
         <Link to="/app1">app1</Link>
       </Menu.Item>

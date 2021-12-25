@@ -21,6 +21,9 @@ export async function bootstrap() {
 
 export async function mount(props) {
   console.log('app1 props from main framework', props);
+  props.onGlobalStateChange((state)=>{
+    console.log("子类获取",state);
+  },true)
   render(props);
 }
 
