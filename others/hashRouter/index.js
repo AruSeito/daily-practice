@@ -1,25 +1,31 @@
 class BaseRouter {
   constructor() {
+    // 保存path与cb的关系
     this.routes = new Map();
+    // 绑定方法
     this.refresh = this.refresh.bind(this);
     this.route = this.route.bind(this);
+    // 监听事件
     window.addEventListener("load", this.refresh);
     window.addEventListener("hashchange", this.refresh);
   }
 
+  // 注册路由
   route(path, cb) {
     this.routes.set(path, cb);
   }
 
+  // hash改变时执行的动作
   refresh() {
-    const path = `/${window.location.hash.slice(1) || ""}`;
-    const cb = this.routes.get(path);
+    const hash = window.location.hash;
+    const path = hash.slice(1) || "/"
     if (path) {
-      cb();
+      const cb = this.routes.get(path);
+      cb && cb();
     }
   }
-
 }
+
 
 
 const router = new BaseRouter();
@@ -31,7 +37,7 @@ function changeBgColor(color) {
 }
 
 router.route("/", () => {
-  changeBgColor("white")
+  changeBgColor("red")
 })
 router.route("/blue", () => {
   changeBgColor("blue")
